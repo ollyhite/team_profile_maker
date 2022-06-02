@@ -1,10 +1,11 @@
 const Intern = require("../lib/Intern")
 
 describe(('Intern class'),()=>{
-    //  it('test for school',()=>{
-    //     const intern = new Intern("jerry", "1", "jerry@gmail.com","DU");
-    //     expect(typeof intern.school).toBe("string")
-    // })
+    it('test for school',()=>{
+        const info = {name:"jerry", id:"1", email:"jerry@gmail.com", school:"DU"}
+        const intern = new Intern(info);
+        expect(typeof intern.school).toBe("string")
+    })
     describe(('getSchool'),()=>{
         it("is getSchool return same school value", ()=>{
         const intern = new Intern("jerry", "1", "jerry@gmail.com", "DU");
@@ -16,6 +17,12 @@ describe(('Intern class'),()=>{
         it("getRole should return Intern", ()=>{
         const intern = new Intern("jerry", "1", "jerry@gmail.com");
         expect(intern.getRole()).toBe("Intern");
+        })
+    })
+    describe(('internSection'),()=>{
+        it("check internSection is return string or not", ()=>{
+        const intern = new Intern("jerry", "1", "jerry@gmail.com","jerry123");
+        expect(typeof intern.internSection()).toBe("string");
         })
     })
 })
