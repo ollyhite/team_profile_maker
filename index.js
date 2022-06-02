@@ -11,12 +11,15 @@ class Startcreate{
         this.engineer=[];
         this.intern=[];
     }
+    //start questions
     start(){
         inquirer.prompt(qutions.manager).then((answer) =>{
             this.manager = new Manager(answer);
+            //ask add more ppl(position) or not
             this.addMore();
         })
     }
+    //add more ppl function
     addMore(){
         inquirer.prompt(qutions.addMore).then((answer)=>{
             console.log("type",answer);
@@ -25,6 +28,7 @@ class Startcreate{
             }else if(answer.addType === "Intern"){
                 this.internQ();
             }else{
+                //if finished adding ppl, will go to render page function
                 console.log("finished the q, create the filte");
                 const data = {manager:this.manager, engineer:[...this.engineer], intern:[...this.intern]}
                 console.log("final data",data);
@@ -34,13 +38,14 @@ class Startcreate{
             
         })
     }
+    //if user choose engineer, will show engineer question
     engineerQ(){
         inquirer.prompt(qutions.engineer).then((answer) => {
             this.engineer = [...this.engineer,new Engineer(answer)];
             this.addMore();
         })
     }
-
+    //if user choose intern, will show intern question
     internQ(){
         inquirer.prompt(qutions.intern).then((answer) => {
             this.intern = [...this.intern, new Intern(answer)];
@@ -48,7 +53,7 @@ class Startcreate{
         })
     }
 }
-
+//trigger the questions to start
 const startCreatPage = new Startcreate();
 startCreatPage.start();
 

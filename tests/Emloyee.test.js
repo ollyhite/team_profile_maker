@@ -23,28 +23,28 @@ describe('Employee class',()=>{
         expect(valid).toBe(false);
     })
     describe(('getName'),()=>{
-        it("is getName have name", ()=>{
+        it("is getName return same name value", ()=>{
         const employee = new Employee("jerry", "1", "jerry@gmail.com");
         const {name} = employee;
         expect(employee.getName()).toBe(name);
         })
     })
     describe(('getId'),()=>{
-        it("is getID have name", ()=>{
+        it("is getId return same id value", ()=>{
         const employee = new Employee("jerry", "1", "jerry@gmail.com");
         const {id} = employee;
         expect(employee.getId()).toBe(id);
     })
     })
     describe(('getEmail'),()=>{
-        it("is getEmail have name", ()=>{
+        it("is getEmail return same email value", ()=>{
         const employee = new Employee("jerry", "1", "jerry@gmail.com");
         const {email} = employee;
         expect(employee.getEmail()).toBe(email);
         })
     })
     describe(('getRole'),()=>{
-        it("getRole", ()=>{
+        it("getRole should return Employee", ()=>{
         const employee = new Employee("jerry", "1", "jerry@gmail.com");
         expect(employee.getRole()).toBe("Employee");
         })

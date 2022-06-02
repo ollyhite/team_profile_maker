@@ -7,7 +7,7 @@ describe(('Manager class'),()=>{
     //     expect(typeof manager.officeNum).toBe("string");
     // }))
     describe(('getRole'),()=>{
-        it("getRole", ()=>{
+        it("getRole should return Manager", ()=>{
         const manager = new Manager("jerry", "1", "jerry@gmail.com","123");
         expect(manager.getRole()).toBe("Manager");
         })

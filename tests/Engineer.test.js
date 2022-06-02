@@ -48,14 +48,14 @@ describe('Engineer class',()=>{
     //     })
     // })
     describe(('getGithub'),()=>{
-        it("getGithub", ()=>{
+        it("is getGithub return same github value", ()=>{
         const engineer = new Engineer("jerry", "1", "jerry@gmail.com", "jerry123");
         const {github} = engineer;
         expect(engineer.getGithub()).toBe(github);
         })
     })
     describe(('getRole'),()=>{
-        it("getRole", ()=>{
+        it("getRole should return Engineer", ()=>{
         const engineer = new Engineer("jerry", "1", "jerry@gmail.com","jerry123");
         expect(engineer.getRole()).toBe("Engineer");
         })
