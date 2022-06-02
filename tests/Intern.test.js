@@ -6,6 +6,11 @@ describe(('Intern class'),()=>{
         const intern = new Intern(info);
         expect(typeof intern.school).toBe("string")
     })
+    it('test for school not empty',()=>{
+        const info = {name:"jerry", id:"1", email:"jerry@gmail.com", school:"DU"}
+        const intern = new Intern(info);
+        expect(intern.school.trim().length).toBeGreaterThan(0);
+    })
     describe(('getSchool'),()=>{
         it("is getSchool return same school value", ()=>{
         const intern = new Intern("jerry", "1", "jerry@gmail.com", "DU");

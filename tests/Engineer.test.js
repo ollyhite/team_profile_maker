@@ -6,6 +6,11 @@ describe('Engineer class',()=>{
         const engineer = new Engineer(info);
         expect(typeof engineer.github).toBe("string")
     })
+    it('test for github not empty',()=>{
+        const info = {name:"jerry", id:"1", email:"jerry@gmail.com", github:"jerry123"}
+        const engineer = new Engineer(info);
+        expect(engineer.github.trim().length).toBeGreaterThan(0);
+    })
     describe(('getGithub'),()=>{
         it("is getGithub return same github value", ()=>{
         const engineer = new Engineer("jerry", "1", "jerry@gmail.com", "jerry123");

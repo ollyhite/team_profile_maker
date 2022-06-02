@@ -6,6 +6,11 @@ describe(('Manager class'),()=>{
         const manager = new Manager(info);
         expect(typeof manager.officeNum).toBe("string");
     })
+    it('test for officeNum not empty',()=>{
+        const info = {name:"jerry", id:"1", email:"jerry@gmail.com", officeNum:"123"}
+        const manager = new Manager(info);
+        expect(manager.officeNum.trim().length).toBeGreaterThan(0);
+    })
     describe(('getRole'),()=>{
         it("getRole should return Manager", ()=>{
         const manager = new Manager("jerry", "1", "jerry@gmail.com","123");

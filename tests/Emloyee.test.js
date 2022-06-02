@@ -7,6 +7,12 @@ describe('Employee class',()=>{
         expect(typeof employee.id).toBe("string")
         expect(typeof employee.email).toBe("string")
     })
+    it('test for name, id, email not empty',()=>{
+        const employee = new Employee("jerry", "1", "jerry@gmail.com");
+        expect(employee.name.trim().length).toBeGreaterThan(0);
+        expect(employee.id.trim().length).toBeGreaterThan(0);
+        expect(employee.email.trim().length).toBeGreaterThan(0);
+    })
     it('test for id should over 0',()=>{
         const employee = new Employee("jerry", "1", "jerry@gmail.com");
         const idNum = parseInt(employee.id);
@@ -15,12 +21,12 @@ describe('Employee class',()=>{
     it('test for email format is correct',()=>{
         const employee = new Employee("jerry", "1", "jerry@gmail.com");
         valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(employee.email)
-        expect(valid).toBe(true);
+        expect(valid).toEqual(true);
     })
     it('test for email format is incorrect',()=>{
         const employee = new Employee("jerry", "1", "jerrygmail.com");
         valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(employee.email)
-        expect(valid).toBe(false);
+        expect(valid).toEqual(false);
     })
     describe(('getName'),()=>{
         it("is getName return same name value", ()=>{

@@ -13,6 +13,9 @@ class Startcreate{
     }
     //start questions
     start(){
+        console.log("Welcome to the team generator!");
+        // console.log("Use 'npm run reset' to reset the dist/folder");
+        console.log("Please Build your team");
         inquirer.prompt(qutions.manager).then((answer) =>{
             this.manager = new Manager(answer);
             //ask add more ppl(position) or not
