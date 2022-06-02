@@ -1,3 +1,4 @@
-img{
-    width: 50px;
+.jumbotron.jumbotron-fluid{
+    background-color: rgb(67, 145, 145);
+    color: white;
 }
