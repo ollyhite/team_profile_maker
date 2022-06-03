@@ -30,9 +30,9 @@ If you as a manager in company, sometime will participate in so many different t
 
 ## Usage
 
-![alt text](./dist/images/)
+![alt text](./dist/images/team_profile_maker_demo.gif)
 
-https://drive.google.com/file/d/1HaD3vYPm52u89kD9G9U9SUimW-lNblg8/view
+https://drive.google.com/file/d/1hI_9HJr8ulSsVhvrhb_Y6r-znqOc640k/view
 
 ## Built With
 
